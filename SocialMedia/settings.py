@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'SocialMedia.wsgi.application'
+# WSGI_APPLICATION = 'SocialMedia.wsgi.application'
 
 
 # Database
