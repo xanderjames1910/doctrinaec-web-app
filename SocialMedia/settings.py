@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     # 'debug_toolbar',
     'bootstrap4',
     'users.apps.UsersConfig',
-    'groups',
+    # 'groups',
     'newsletters',
     # 'posts',
 ]

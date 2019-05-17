@@ -89,7 +89,7 @@
             </div>
           </div>
           {% if user.is_authenticated %}
-            <div class="dropdown">
+            {% comment %} <div class="dropdown">
               <button class="btn btn-primary btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons mr-1 align-middle">group_work</i>
                   <span class="align-middle">Comunidad</span>
@@ -108,7 +108,7 @@
                   </div>
                 </a>
               </div>
-            </div>
+            </div> {% endcomment %}
             <div class="dropdown">
               <button class="btn btn-primary btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons mr-1 align-middle">person</i>
