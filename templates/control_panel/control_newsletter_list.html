@@ -1,0 +1,88 @@
+{% extends 'control_base.html' %}
+
+{% block nav_item_newsletter_list %}
+  active
+{% endblock nav_item_newsletter_list %}
+
+{% block content %}
+    <div class="main">
+        {% if messages %}
+            {% for message in messages %}
+            <div
+                {% if message.tags %}
+                class="{{ message.tags }}"
+                {% endif %}
+                role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endfor %}
+        {% endif %}
+        <div class="card card_round shadow-sm">
+            <div class="card-header header_card_round text-primary mb-0">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <h3 class="mb-0">Todos los Boletines de Noticias</h3>
+                    </div>
+                    <div class="col-sm-3 text-md-right text-sm-left">
+                        <a href="{% url "control_panel:control_newsletter" %}" class="btn btn-success">
+                            <div class="inline-block">
+                                <i class="material-icons mr-1 align-middle">add</i>
+                                <span class="align-middle">Nuevo Boletín</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive table-hover">
+                    <table class="table table-striped">
+                        <thead>
+                            <th>Asunto</th>
+                            <th>Esatado</th>
+                            <th>Creado</th>
+                            <th>Actualizado</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </thead>
+                        <tbody>
+                            {% for item in items %}
+                                <tr>
+                                    <td class="align-middle">
+                                        <a href="{% url 'control_panel:control_newsletter_detail' pk=item.pk %}">
+                                            {{ item.subject }}
+                                        </a>
+                                    </td>
+                                    <td class="align-middle">{{ item.status }}</td>
+                                    <td class="align-middle">{{ item.created }}</td>
+                                    <td class="align-middle">{{ item.updated }}</td>
+                                    <td class="align-middle">
+                                        <a href="{% url 'control_panel:control_newsletter_edit' pk=item.pk %}" 
+                                            class="btn btn-warning btn-sm">
+                                            <div class="inline-block">
+                                                <i class="material-icons mr-1 align-middle d-none d-md-inline-block">edit</i>
+                                                <span class="align-middle">Editar</span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="align-middle">
+                                        <a href="{% url 'control_panel:control_newsletter_delete' pk=item.pk %}" 
+                                            class="btn btn-danger btn-sm">
+                                            <div class="inline-block">
+                                                <i class="material-icons mr-1 align-middle d-none d-md-inline-block">delete</i>
+                                                <span class="align-middle">Eliminar</span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% include 'pagination.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

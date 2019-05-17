@@ -1,0 +1,38 @@
+{% extends 'control_base.html' %}
+
+{% block nav_item_newsletter_list %}
+  active
+{% endblock nav_item_newsletter_list %}
+
+{% load bootstrap4 %}
+
+{% block content %}
+  <div class="card card_round shadow-sm">
+    <div class="card-header header_card_round text-primary">
+      <div class="row">
+        <div class="col-3 col-md-1">
+          <a href="{{ request.META.HTTP_REFERER }}" class="btn btn-primary">
+            <div class="inline-block">
+              <i class="material-icons mr-1 align-middle">arrow_back</i>
+            </div>
+          </a>
+        </div>
+        <div class="col-9 col-md-11 px-0">
+          <h3 class="mb-0">Envío de Boletín</h3>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <form method="POST" novalidate>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-primary btn-block button_round">
+          <div class="inline-block">
+            <i class="material-icons mr-1 icon_size align-middle">save</i>
+            <span class="align-middle">Guardar</span>
+          </div>
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

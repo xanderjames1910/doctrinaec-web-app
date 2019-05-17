@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load bootstrap4 %}
+
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6 px-0">
+      {% if messages %}
+        {% for message in messages %}
+          <div
+            {% if message.tags %}
+              class="{{ message.tags }}"
+            {% endif %}
+            role="alert">
+            {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        {% endfor %}
+      {% endif %}
+      <div class="card card_round shadow-sm">
+        <div class="card-body pb-0 px-0">
+          <h3 class="card-title text-primary text-center my-2">Cancelar Subscripción</h3>
+          <form method="POST" class="p-0" novalidate>
+            <div class="card-body py-1">
+              {% csrf_token %}
+              {% bootstrap_form form %}
+            </div>
+            <div class="card-footer footer_card_round">
+              <button type="submit" class="btn btn-danger btn-block button_round">
+                <div class="inline-block">
+                  <i class="material-icons mr-1 icon_size align-middle">cancel</i>
+                  <span class="align-middle">Cancelar Subscripción</span>
+                </div>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

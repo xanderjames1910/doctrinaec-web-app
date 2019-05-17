@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/static/demos/css/citycoco.css">
+    <title>CityCoco - Demo</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">CITYCOCO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse pt-sm-1 pt-md-0" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item my-2">
+            <a class="btn btn-outline-light btn-block text-left" href="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/templates/demos/citycoco/citycoco_base.html">
+              <div class="inline-block">
+                <i class="material-icons mr-1 align-middle">home</i>
+                <span class="align-middle">Inicio</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item my-2 mx-md-2 mx-sm-0">
+            <a class="btn btn-outline-light btn-block text-left" href="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/templates/demos/citycoco/sign_un_citycoco.html">
+              <div class="inline-block">
+                <i class="material-icons mr-1 align-middle">account_circle</i>
+                <span class="align-middle">Ingresar</span>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item mt-2 mx-md-2 mx-sm-0">
+            <form class="form-inline">
+              <div class="input-group mb-2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-dark text-light">
+                    <i class="material-icons mr-1 align-middle">search</i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container px-0 my-4 py-4 my-md-5">
+      <nav class="mt-3">
+        <div class="nav nav-tabs justify-content-center" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Nuevos</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Usados</a>
+        </div>
+      </nav>
+
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-6 px-0 pt-sm-1 pt-md-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/templates/demos/citycoco/cotycoco_detail.html">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_red.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_gray.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_white.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                          <i class="material-icons">star_border</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_gray.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_red.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_white.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_red.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_red.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                          <i class="material-icons">star_border</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_gray.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_red.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-6 px-0 pt-sm-1 pt-md-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_red.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_gray.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_white.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                          <i class="material-icons">star_border</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_gray.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_red.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_white.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_red.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_red.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                          <i class="material-icons">star_border</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_gray.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 px-0">
+                <a class="btn btn-light button_card my-1 mx-md-1" href="#">
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="img_container m-1">
+                        <img src="/Users/JamesMontes/Desktop/Full_Stack_Python/Django/simple_social_media/SocialMedia/media/images/citycoco_red.png" alt="citycoco_red">
+                      </div>
+                    </div>
+                    <div class="col-6 px-0">
+                      <div class="row pt-2 justify-content-center">
+                        <div class="col-12">
+                          <h5 class="item_title text-truncate">citycoco red</h5>
+                        </div>
+                        <div class="col-12">
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star</i>
+                          <i class="material-icons">star_border</i>
+                        </div>
+                        <div class="col-12">
+                          <h6 class="mt-0 item_title">$ 960,00</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-1" style="height: 98px;">
+                      <i class="material-icons" style="margin-top: 37px;">navigate_next</i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="fixed-bottom text-center text-muted bg-dark py-2" style="font-size: 10px;">
+      <span class="font-weight-bold">&copy; Copyright
+      <script>
+        document.write(new Date().getFullYear())
+      </script> CITYCOCO</span><br> Desarrollado por <span class="font-weight-bold">Jimmy A. Montes</span>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

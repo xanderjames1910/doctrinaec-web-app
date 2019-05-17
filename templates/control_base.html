@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'simplesocial/css/bootstrap.min.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'dashboard/css/custom.css' %}">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>Doctrina EC</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary shadow-sm">
+      <a class="btn btn-danger" id="activador" href="#">
+        <div class="inline-block">
+          <i class="material-icons align-middle">dashboard</i>
+        </div>
+      </a>
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Doctrina EC
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="btn btn-primary btn-block text-left" href="{% url 'home' %}">
+              <div class="inline-block">
+                <i class="material-icons mr-1 align-middle">home</i>
+                <span class="align-middle">Inicio</span>
+              </div>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-primary btn-block text-left" href="#">
+              <div class="inline-block">
+                <i class="material-icons mr-1 align-middle">view_list</i>
+                <span class="align-middle">Blog</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="material-icons mr-1 align-middle">local_library</i>
+                <span class="align-middle">Oferta académica</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-md-right shadow-sm" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">
+                <div class="inline-block">
+                  <i class="material-icons mr-1 align-middle">cast_connected</i>
+                  <span class="align-middle">Talleres</span>
+                </div>
+              </a>
+              <a class="dropdown-item" href="#">
+                <div class="inline-block">
+                  <i class="material-icons mr-1 align-middle">school</i>
+                  <span class="align-middle">Cursos</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="material-icons mr-1 align-middle">account_balance</i>
+                <span class="align-middle">Nuestra Empresa</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu-md-right shadow-sm" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">
+                <div class="inline-block">
+                  <i class="material-icons mr-1 align-middle">supervised_user_circle</i>
+                  <span class="align-middle">Quiénes Somos</span>
+                </div>
+              </a>
+              <a class="dropdown-item" href="#">
+                <div class="inline-block">
+                  <i class="material-icons mr-1 align-middle">phone</i>
+                  <span class="align-middle">Contacto</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          {% if user.is_authenticated %}
+            <div class="dropdown">
+              <button class="btn btn-primary btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons mr-1 align-middle">group_work</i>
+                  <span class="align-middle">Comunidad</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-md-right shadow-sm" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{% url 'groups:all' %}">
+                  <div class="inline-block">
+                    <i class="material-icons mr-1 align-middle">group</i>
+                    <span class="align-middle">Ver Grupos</span>
+                  </div>
+                </a>
+                <a class="dropdown-item" href="{% url 'groups:create' %}">
+                  <div class="inline-block">
+                    <i class="material-icons mr-1 align-middle">group_add</i>
+                    <span class="align-middle">Crear Grupo</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-primary btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons mr-1 align-middle">person</i>
+                  <span class="align-middle">{{ user.username }}</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-md-right shadow-sm" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{% url 'posts:create' %}">
+                  <div class="inline-block">
+                    <i class="material-icons mr-1 align-middle">publish</i>
+                    <span class="align-middle">Publicar</span>
+                  </div>
+                </a>
+                <a class="dropdown-item" href="{% url 'users:logout' %}">
+                  <div class="inline-block">
+                    <i class="material-icons mr-1 align-middle">exit_to_app</i>
+                    <span class="align-middle">Cerrar Sesión</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          {% else %}
+            <div class="dropdown">
+              <button class="btn btn-primary btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons mr-1 align-middle">group_work</i>
+                  <span class="align-middle">Comunidad</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-md-right shadow-sm" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{% url 'groups:all' %}">
+                  <div class="inline-block">
+                    <i class="material-icons mr-1 align-middle">group</i>
+                    <span class="align-middle">Ver Grupos</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-danger btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons mr-1 align-middle">face</i>
+                  <span class="align-middle">Ya eres miembro?</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-md-right shadow-sm" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{% url 'users:login' %}">
+                  <div class="inline-block">
+                    <i class="material-icons mr-1 align-middle">account_circle</i>
+                    <span class="align-middle">Ingresar</span>
+                  </div>
+                </a>
+                <a class="dropdown-item" href="{% url 'users:signup' %}">
+                  <div class="inline-block">
+                    <i class="material-icons mr-1 align-middle">how_to_reg</i>
+                    <span class="align-middle">Registrarme</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+    <div style="margin-top: 58px;">
+      <aside id="sidenav" class="sidebar" style="margin-top: 58px;">
+        <div class="logo"><img src="http://placehold.it/60x60"/></div>
+        <ul class="mynav">
+          <li>
+            <a href="#">
+              <div class="inline-block">
+                <i class="material-icons mr-1 align-middle">dashboard</i>
+                <span class="align-middle">Dashboard</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'control_panel:control_newsletter_list' %}" 
+              class="{% block nav_item_newsletter_list %}{% endblock nav_item_newsletter_list %}">
+              <div class="inline-block">
+                <i class="material-icons mr-1 align-middle">drafts</i>
+                <span class="align-middle">Boletín de Noticias</span>
+              </div>
+            </a>
+          </li>
+          <li><a href="#">nav three</a></li>
+        </ul>
+        <p class="bottom">&copy;
+          <script>
+            document.write(new Date().getFullYear())
+          </script> Doctrina EC
+        </p>
+      </aside>
+      <section class="main">
+        {% block content %}
+        {% endblock %}
+      </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'simplesocial/js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'dashboard/js/custom.js' %}"></script>
+  </body>
+</html>

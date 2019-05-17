@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block carousel %}
+  {% include 'index/slider.html' %}
+{% endblock %}
+
+{% block content %}
+  <div class="row justify-content-center">
+    {% if messages %}
+      {% for message in messages %}
+      <div
+        {% if message.tags %}
+        class="{{ message.tags }}"
+        {% endif %}
+        role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endfor %}
+    {% endif %}
+    <div class="col-md-6 col-lg-4">
+
+    </div>
+    <div class="col-md-6 col-lg-8 mt-sm-4 mt-md-0">
+
+    </div>
+    <h1>Página de inicio</h1>
+    <div class="card-columns">
+      {% include 'index/talleres.html' %}
+
+      {% include 'index/nosotros.html' %}
+
+      {% include 'index/cursos.html' %}
+
+      {% include 'index/inscribete.html' %}
+
+      {% include 'index/contacto.html' %}
+
+    </div>
+  </div>
+
+{% endblock %}

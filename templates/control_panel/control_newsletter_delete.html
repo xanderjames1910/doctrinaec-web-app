@@ -1,0 +1,27 @@
+{% extends 'control_base.html' %}
+
+{% block nav_item_newsletter_list %}
+  active
+{% endblock nav_item_newsletter_list %}
+
+{% load bootstrap4 %}
+
+{% block content %}
+  <div class="card card_round shadow-sm">
+    <div class="card-header header_card_round text-primary">
+      <h3 class="mb-0">Envío de Boletín de Noticias</h3>
+    </div>
+    <div class="card-body">
+      <form method="POST" novalidate>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-danger btn-block button_round">
+          <div class="inline-block">
+            <i class="material-icons mr-1 icon_size align-middle">delete</i>
+            <span class="align-middle">Eliminar</span>
+          </div>
+        </button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

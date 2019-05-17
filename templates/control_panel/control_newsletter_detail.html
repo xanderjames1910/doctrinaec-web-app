@@ -1,0 +1,55 @@
+{% extends 'control_base.html' %}
+
+{% block nav_item_newsletter_list %}
+  active
+{% endblock nav_item_newsletter_list %} 
+
+{% block content %}
+    <div id="email-preview" class="main emailpreview">
+        <div class="card card_round shadow-sm">
+            <div class="card-header header_card_round text-primary">
+                <div class="row">
+                    <div class="col-3 col-md-1">
+                        <a href="{% url 'control_panel:control_newsletter_list' %}" class="btn btn-primary">
+                            <div class="inline-block">
+                                <i class="material-icons mr-1 align-middle">arrow_back</i>
+                            </div>
+                        </a>
+                    </div>
+                        <div class="col-9 col-md-11 px-0">
+                        <h3 class="mb-0">{{ newsletter.subject }}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                {{ newsletter.body|safe }}
+            </div>
+            <div class="card-footer footer_card_round">
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <div class="col-auto">
+                            <a class="btn btn-warning mx-md-2" href="{% url 'control_panel:control_newsletter_edit' pk=newsletter.pk %}" role="button">
+                                <div class="inline-block">
+                                    <i class="material-icons mr-1 align-middle d-none d-md-inline-block">edit</i>
+                                    <span class="align-middle">Editar</span>
+                                </div>
+                            </a>
+                            <a class="btn btn-danger mx-md-2" href="{% url 'control_panel:control_newsletter_delete' pk=newsletter.pk %}" role="button">
+                                <div class="inline-block">
+                                    <i class="material-icons mr-1 align-middle d-none d-md-inline-block">delete</i>
+                                    <span class="align-middle">Eliminar</span>
+                                </div>
+                            </a>
+                            <a class="btn btn-success mx-md-2" href="{% url 'control_panel:control_newsletter' %}" role="button">
+                                <div class="">
+                                    <i class="material-icons mr-1 align-middle d-none d-md-inline-block">add</i>
+                                    <span class="align-middle">Nuevo</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock  %}

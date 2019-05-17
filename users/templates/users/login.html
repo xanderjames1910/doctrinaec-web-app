@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+{% block content %}
+  <div class="container">
+    <div class="row justify-content-center card_round">
+      <div class="col-md-6 px-0">
+        {% if messages %}
+          {% for message in messages %}
+            <div
+              {% if message.tags %}
+                class="{{ message.tags }}"
+              {% endif %}
+              role="alert">
+              {{ message }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          {% endfor %}
+        {% endif %}
+        <div class="card mb-4 shadow-sm card_round">
+          <div class="card-header header_card_round">
+            <h3 class="text-center">Iniciar Sesión</h3>
+          </div>
+          <form method="POST" novalidate>
+            <div class="card-body">
+              {% csrf_token %}
+              {% bootstrap_form form %}
+            </div>
+            <div class="card-footer footer_card_round">
+              <button type="submit" class="btn btn-primary btn-block button_round">
+                <div class="inline-block">
+                  <i class="material-icons mr-1 icon_size align-middle">account_circle</i>
+                  <span class="align-middle">Ingresar</span>
+                </div>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
