@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'groups',
     'newsletters',
-    'posts',
+    # 'posts',
 ]
 
 MIDDLEWARE = [

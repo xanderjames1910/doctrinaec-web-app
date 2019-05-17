@@ -29,7 +29,7 @@ urlpatterns = [
     path('control/', include('control_panel.urls', namespace='control_panel')),
     path('groups/', include('groups.urls', namespace='groups')),
     path('newsletter/', include('newsletters.urls', namespace='newsletters')),
-    path('posts/', include('posts.urls', namespace='posts')),
+    # path('posts/', include('posts.urls', namespace='posts')),
     path('test/', views.TestPage.as_view(), name='test'),
     path('thanks/', views.ThanksPage.as_view(), name='thanks'),
 ]

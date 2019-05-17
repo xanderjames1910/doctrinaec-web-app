@@ -121,12 +121,12 @@
                     <span class="align-middle">Perfil</span>
                   </div>
                 </a>
-                <a class="dropdown-item" href="{% url 'posts:create' %}">
+                {% comment %} <a class="dropdown-item" href="{% url 'posts:create' %}">
                   <div class="inline-block">
                     <i class="material-icons mr-1 align-middle">publish</i>
                     <span class="align-middle">Publicar</span>
                   </div>
-                </a>
+                </a> {% endcomment %}
                 {% if user.is_superuser %}
                   <a class="dropdown-item" href="{% url 'control_panel:control_newsletter_list' %}">
                     <div class="inline-block">
