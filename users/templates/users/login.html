@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% comment %} {% load bootstrap4 %} {% endcomment %}
+{% load bootstrap4 %}
 
 {% block content %}
   <div class="container">
@@ -26,8 +26,7 @@
           <form method="POST" novalidate>
             <div class="card-body">
               {% csrf_token %}
-              {% form %}
-              {% comment %} {% bootstrap_form form %} {% endcomment %}
+              {% bootstrap_form form %}
             </div>
             <div class="card-footer footer_card_round">
               <button type="submit" class="btn btn-primary btn-block button_round">

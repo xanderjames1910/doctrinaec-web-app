@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'bootstrap4',
     'users.apps.UsersConfig',
     'newsletters',
+    'groups',
+    'posts',
 ]
 
 MIDDLEWARE = [

@@ -99,7 +99,7 @@
                   <i class="material-icons mr-1 align-middle">group_work</i>
                   <span class="align-middle">Comunidad</span>
               </button>
-              {% comment %} <div class="dropdown-menu dropdown-menu-md-right shadow-sm" aria-labelledby="dropdownMenuButton">
+              <div class="dropdown-menu dropdown-menu-md-right shadow-sm" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="{% url 'groups:all' %}">
                   <div class="inline-block">
                     <i class="material-icons mr-1 align-middle">group</i>
@@ -112,7 +112,7 @@
                     <span class="align-middle">Crear Grupo</span>
                   </div>
                 </a>
-              </div> {% endcomment %}
+              </div>
             </div>
             <div class="dropdown">
               <button class="btn btn-primary btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -120,12 +120,12 @@
                   <span class="align-middle">{{ user.username }}</span>
               </button>
               <div class="dropdown-menu dropdown-menu-md-right shadow-sm" aria-labelledby="dropdownMenuButton">
-                {% comment %} <a class="dropdown-item" href="{% url 'posts:create' %}">
+                <a class="dropdown-item" href="{% url 'posts:create' %}">
                   <div class="inline-block">
                     <i class="material-icons mr-1 align-middle">publish</i>
                     <span class="align-middle">Publicar</span>
                   </div>
-                </a> {% endcomment %}
+                </a>
                 <a class="dropdown-item" href="{% url 'users:logout' %}">
                   <div class="inline-block">
                     <i class="material-icons mr-1 align-middle">exit_to_app</i>
@@ -135,7 +135,7 @@
               </div>
             </div>
           {% else %}
-            {% comment %} <div class="dropdown">
+            <div class="dropdown">
               <button class="btn btn-primary btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons mr-1 align-middle">group_work</i>
                   <span class="align-middle">Comunidad</span>
@@ -148,7 +148,7 @@
                   </div>
                 </a>
               </div>
-            </div> {% endcomment %}
+            </div>
             <div class="dropdown">
               <button class="btn btn-danger btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons mr-1 align-middle">face</i>

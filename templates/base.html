@@ -89,7 +89,7 @@
             </div>
           </div>
           {% if user.is_authenticated %}
-            {% comment %} <div class="dropdown">
+            <div class="dropdown">
               <button class="btn btn-primary btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons mr-1 align-middle">group_work</i>
                   <span class="align-middle">Comunidad</span>
@@ -108,7 +108,7 @@
                   </div>
                 </a>
               </div>
-            </div> {% endcomment %}
+            </div>
             <div class="dropdown">
               <button class="btn btn-primary btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons mr-1 align-middle">person</i>
@@ -121,12 +121,12 @@
                     <span class="align-middle">Perfil</span>
                   </div>
                 </a>
-                {% comment %} <a class="dropdown-item" href="{% url 'posts:create' %}">
+                <a class="dropdown-item" href="{% url 'posts:create' %}">
                   <div class="inline-block">
                     <i class="material-icons mr-1 align-middle">publish</i>
                     <span class="align-middle">Publicar</span>
                   </div>
-                </a> {% endcomment %}
+                </a>
                 {% if user.is_superuser %}
                   <a class="dropdown-item" href="{% url 'control_panel:control_newsletter_list' %}">
                     <div class="inline-block">
@@ -144,7 +144,7 @@
               </div>
             </div>
           {% else %}
-            {% comment %} <div class="dropdown">
+            <div class="dropdown">
               <button class="btn btn-primary btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons mr-1 align-middle">group_work</i>
                   <span class="align-middle">Comunidad</span>
@@ -157,7 +157,7 @@
                   </div>
                 </a>
               </div>
-            </div> {% endcomment %}
+            </div>
             <div class="dropdown">
               <button class="btn btn-danger btn-block dropdown-toggle text-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons mr-1 align-middle">face</i>
